@@ -1,0 +1,685 @@
+.cpm .cpm-top-bar .cpm-priject-search-bar {
+  padding-top: 20px;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-3.cpm-sm-col-12.cpm-no-padding.cpm-no-margin {
+  width: 100%;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 {
+  width: 100%;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 .cpm-col-5.cpm-sm-col-12 {
+  width: 100%;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 .cpm-col-5.cpm-sm-col-12 select#project_cat {
+  width: 70%;
+  padding: 0px;
+  margin: 0px;
+  height: 40px;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 .cpm-col-5.cpm-sm-col-12 input[type='submit'] {
+  height: 40px;
+  width: 24%;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 .cpm-col-7.cpm-sm-col-12.cpm-project-search {
+  width: 100%;
+}
+.cpm .cpm-top-bar .cpm-priject-search-bar .cpm-col-9.cpm-no-padding.cpm-no-margin.cpm-sm-col-12 .cpm-col-7.cpm-sm-col-12.cpm-project-search input {
+  height: 40px;
+  width: 46%;
+  margin-right: 15px;
+}
+.cpm:after,
+.cpm:before {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cpm .cpm-top-bar .cpm-project-group {
+  width: 100%;
+}
+.cpm .cpm-top-bar .cpm-project-group .cpm-col-8.cpm-project-group-ul {
+  width: 80%;
+}
+.cpm .cpm-top-bar .cpm-project-group .cpm-col-4.cpm-last-col.cpm-text-right.show_desktop_only {
+  display: block;
+  width: 20%;
+}
+.cpm .cpm-top-bar .cpm-project-group ul.list-inline.cpm-col-8.cpm-project-group-ul li a {
+  box-shadow: none;
+}
+.cpm .cpm-top-bar .cpm-project-group .cpm-col-4.cpm-last-col.cpm-text-right.show_desktop_only .cpm-project-view li a {
+  display: block;
+  box-shadow: none;
+}
+.cpm .cpm-projects.cpm-project-grid.cpm-frontend-project-list .cpm-project.cpm-column-gap-left.cpm-sm-col-12 {
+  min-width: 350px;
+  margin-bottom: 50px;
+}
+.cpm .cpm-projects.cpm-project-grid.cpm-frontend-project-list .cpm-project.cpm-column-gap-left.cpm-sm-col-12 ul li {
+  display: inline-block;
+  width: 50%;
+}
+.cpm .cpm-projects.cpm-project-grid.cpm-frontend-project-list .cpm-project.cpm-column-gap-left.cpm-sm-col-12 .cpm-project-action-icon ul.cpm-settings li {
+  width: 100%;
+  display: block;
+}
+.cpm .cpm-projects.cpm-project-grid.cpm-frontend-project-list .cpm-project.cpm-column-gap-left.cpm-sm-col-12 .cpm-project-action-icon ul.cpm-settings li a {
+  box-shadow: none;
+}
+.cpm .cpm-projects.cpm-project-grid.cpm-frontend-project-list .cpm-project.cpm-column-gap-left.cpm-sm-col-12 .cpm-project-action-icon ul.cpm-settings li span.cpm-spinner {
+  display: none;
+}
+.cpm .tablenav {
+  display: inline-block;
+  width: 100%;
+}
+.cpm .tablenav .tablenav-pages {
+  float: none !important;
+  margin-left: 0 !important;
+}
+.cpm .nav-tab {
+  padding: 4px 10px 6px;
+  border-color: #DFDFDF #DFDFDF #FFFFFF;
+  border-style: solid;
+  border-width: 1px 1px 0;
+  color: #aaa;
+  text-shadow: #fff 0 1px 0;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  padding: 4px 14px 6px;
+  text-decoration: none;
+  margin: 0 6px -1px 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.cpm .nav-tab.nav-tab-active {
+  border-width: 1px;
+  color: #464646;
+}
+.cpm h2.nav-tab-wrapper,
+.cpm h3.nav-tab-wrapper {
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 0;
+  margin: 10px 0 0 0;
+}
+.cpm h2 .nav-tab {
+  padding: 4px 10px 6px;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+}
+.cpm .cpm-frontend-project-list .cpm-project {
+  height: auto;
+}
+.cpm .cpm-project-grid .cpm-project .cpm-project-meta{
+	padding-bottom: 60px;
+}
+.cpm .cpm-frontend-project-list .cpm-project .cpm-project-meta ul li {
+  float: none;
+  width: 100%;
+}
+.cpm .cpm-frontend-project-list .cpm-project .cpm-project-meta ul li a {
+  box-shadow: none;
+}
+.cpm .cpm-frontend-project-list .cpm-project .cpm-project-meta ul li :hover {
+  text-decoration: underline !important;
+}
+.cpm .cpm-frontend-project-list .cpm-project .cpm-project-people {
+  margin-top: 10px;
+  top: 73%;
+}
+.cpm .cpm-frontend-project-list .cpm-project .cpm-progress {
+  bottom: 15%;
+}
+.cpm h3.cpm-nav-title {
+  margin: 0 0 10px;
+}
+.cpm ul,
+.cpm li {
+  margin-left: 0;
+  list-style: none;
+}
+.cpm .cpm-activity {
+  margin-top: 15px;
+}
+.cpm .cpm-activity li {
+  margin-left: 0;
+}
+.cpm .cpm-comment-form textarea,
+.cpm .cpm-message-form textarea,
+.cpm .cpm-milestone-form textarea {
+  width: 95%;
+}
+.cpm table.cpm-messages-table {
+  border: none;
+}
+.cpm table.cpm-messages-table td {
+  border-top: none;
+}
+.cpm table.cpm-messages-table td.author {
+  vertical-align: middle;
+}
+.cpm .cpm-single {
+  margin-bottom: 15px;
+}
+.cpm .cpm-single .cpm-entry-title {
+  line-height: 150%;
+}
+.cpm .cpm-single .cpm-entry-meta {
+  margin: 5px 10px;
+}
+.cpm .cpm-single .cpm-message-form-wrap {
+  margin: 15px 0 15px 10px;
+}
+.cpm .cpm-comment-form-wrap {
+  margin: 15px 0 15px 65px;
+}
+.cpm .cpm-comment-edit-form .cpm-comment-form-wrap {
+  width: 95%;
+}
+.cpm ul.cpm-todolists {
+  padding: 0;
+}
+.cpm ul.cpm-todolists article.cpm-todolist > ul {
+  padding: 0 15px;
+  margin: 0;
+}
+.cpm ul.cpm-todolists article.cpm-todolist header h3 {
+  line-height: 150%;
+  margin: 0;
+}
+.cpm ul.cpm-todolists article.cpm-todolist header .cpm-list-actions {
+  left: -58px;
+  top: 6px;
+}
+.cpm ul.cpm-todolists article.cpm-todolist .cpm-todos li {
+  margin-left: 0;
+}
+.cpm ul.cpm-todolists article.cpm-todolist .cpm-todos li .cpm-todo-action {
+  left: -40px;
+}
+.cpm .cpm-new-todolist-form,
+.cpm .cpm-list-edit-form {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px dashed #DFDFDF;
+}
+.cpm .cpm-new-todolist-form textarea,
+.cpm .cpm-list-edit-form textarea {
+  width: 95%;
+}
+.cpm .cpm-single-task .cpm-todo-wrap .cpm-task-edit-form {
+  width: 85%;
+}
+.cpm .cpm-milestones h3.title {
+  margin-bottom: 0;
+}
+.cpm .cpm-milestones .cpm-milestone h3 {
+  line-height: 150%;
+}
+.cpm .cpm-milestones .cpm-milestone .cpm-milestone-edit-form .cpm-milestone-form-wrap {
+  width: 95%;
+  margin-bottom: 15px;
+}
+.cpm .cpm-milestones ul.cpm-links:after,
+.cpm .cpm-milestones ul.cpm-links:before {
+  clear: both;
+  content: "";
+  display: table;
+}
+.cpm .cpm-milestones ul.cpm-links li {
+  margin: 0;
+}
+.cpm .cpm-files {
+  margin-top: 15px;
+}
+.cpm .submit {
+  padding: 10px 0;
+}
+.cpm .cpm-comment-wrap ul {
+  margin: 0 !important;
+  list-style: disc !important;
+}
+.cpm .cpm-comment-wrap ul li {
+  list-style: disc !important;
+}
+.cpm .cpm-comment-wrap ol {
+  list-style: decimal !important;
+  margin: 0 !important;
+}
+.cpm .cpm-comment-wrap ol li {
+  list-style: decimal !important;
+}
+.comment-count-approved {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 8px;
+  min-width: 24px;
+  height: 2em;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #72777c;
+  color: #fff;
+  font-size: 11px;
+  line-height: 21px;
+  text-align: center;
+  display: inline-block;
+}
+.comment-count-approved:hover {
+  background-color: #0073aa;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head {
+  padding-top: 10px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-detail {
+  margin: 0px;
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-detail h2 {
+  font-size: 20px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-detail h2 .cpm-project-title {
+  padding-top: 5px;
+  margin-top: 5px;
+  display: block;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-detail h2 a.cpm-icon-edit.cpm-project-edit-link.small-text {
+  display: inline-block;
+  padding-left: 0px;
+  margin-left: 0px;
+  background: #DDD;
+  color: #0073aa;
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-detail .detail {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-single-project-search-wrap {
+  position: absolute;
+  left: 10px;
+  display: inline-block;
+  width: 70%;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-single-project-search-wrap #cpm-single-project-search {
+  width: 100%;
+  padding: 5px;
+  margin: 0px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-project-action {
+  display: inline-block;
+  width: 29%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-project-action .cpm-settings-bind {
+  margin-top: -10px;
+  padding: 5px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-project-action ul.cpm-settings li {
+  border-bottom: 1px solid #ddd;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-project-action ul.cpm-settings li .cpm-spinner {
+  height: 16px;
+  display: none;
+  width: 16px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-col-6.cpm-last-col.cpm-top-right-btn.cpm-text-right.show_desktop_only .cpm-project-action ul.cpm-settings li a {
+  border-bottom: none;
+  box-shadow: none;
+  display: block;
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-group ul li {
+  border-bottom: none;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-project-group ul li a {
+  box-shadow: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 50px;
+  min-height: 50px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-edit-project {
+  margin-top: 0px;
+  background-color: #ffffff;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-edit-project .cpm-form-item {
+  margin-bottom: 15px;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-edit-project .cpm-form-item .chosen-container-single a.chosen-single {
+  height: 30px;
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-edit-project .cpm-form-item.cpm-project-role a.cpm-del-proj-role.cpm-assign-del-user {
+  border: none;
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-project-header.cpm-project-head .cpm-edit-project .cpm-form-item #project_cat_chosen {
+  width: 100% !important;
+}
+.cpm.cpm-front-end .project-overview {
+  width: 100%;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .overview-menu {
+  margin: 0px;
+  width: 100%;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .overview-menu ul li {
+  width: 33%;
+  display: block;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .overview-menu ul li a {
+  text-align: center;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .overview-menu ul li a .icon {
+  display: block;
+  float: none;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .overview-menu ul li a .count {
+  display: block;
+  text-align: left;
+  float: none;
+}
+.cpm.cpm-front-end .project-overview .cpm-col-10.cpm-sm-col-12 .cpm-chart {
+  width: 100%;
+}
+.cpm.cpm-front-end .project-overview .cpm-right-part.cpm-last-col {
+  width: 100%;
+  margin-top: 20px;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 {
+  cursor: default;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 .cpm-col-9 {
+  cursor: pointer;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 .cpm-col-1 {
+  cursor: default;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 .cpm-col-1 .cpm-message-action .delete-message {
+  box-shadow: none;
+  cursor: pointer;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 .cpm-col-1 .cpm-message-action .delete-message :hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-message-page .cpm-message-list .dicussion-list .cpm-col-12 .cpm-col-2.cpm-last-col.cpm-right.comment-count {
+  width: 87%;
+  margin-top: -15px;
+}
+.cpm.cpm-front-end .cpm-new-message-form .cpm-message-form .item {
+  margin-bottom: 15px;
+}
+.cpm.cpm-front-end .cpm-new-message-form .cpm-message-form .item input#message_title {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-new-message-form .cpm-message-form .item select#milestone {
+  width: 50%;
+  height: 35px;
+}
+.cpm.cpm-front-end .cpm-comment-area .cpm-comment-form-wrap .cpm-avatar a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-box-title .cpm-right.cpm-edit-link a.cpm-msg-edit {
+  box-shadow: none;
+  cursor: pointer;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-box-title .cpm-right.cpm-edit-link a.cpm-msg-edit:hover {
+  border-bottom: 1px solid #333 !important;
+  cursor: pointer;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form {
+  width: 100%;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .item {
+  margin-bottom: 15px;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .item input {
+  width: 100%;
+  min-height: 40px;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .item select#milestone {
+  width: 60%;
+  max-height: 40px;
+  min-height: 40px;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .notify-users label.notify {
+  padding: 5px;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .notify-users h2.cpm-box-title {
+  display: inline-block;
+}
+.cpm.cpm-front-end #cpm-signle-message .cpm-single .cpm-msg-edit-form .cpm-message-form-wrap .cpm-message-form .notify-users h2.cpm-box-title .cpm-small-title {
+  padding-right: 0px;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap {
+  margin: 0px;
+  padding: 0px;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .add-tasklist {
+  margin-bottom: 15px;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists {
+  margin: 0px;
+  padding: 0px;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-header .cpm-right a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-header .cpm-right a:hover {
+  border-bottom: 1px solid gray;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-6 {
+  display: block;
+  width: 100%;
+  border-right: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-6 a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-6 a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-6 .cpm-todo-comment a span {
+  font-weight: normal;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-4.cpm-todo-prgress-bar {
+  display: block;
+  width: 80%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todolists .cpm-todolist .cpm-list-footer .cpm-col-1.no-percent {
+  padding-top: 2%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-col-7 .cpm-assigned-user {
+  display: inline-block;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-col-7 .cpm-assigned-user a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-col-7 .cpm-due-date {
+  display: block;
+  width: 66%;
+  margin-top: 8px;
+  padding: 5px;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-col-7 a.task-title {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-task-comment a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-todo-action-right.cpm-last-col {
+  width: 30%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-todo-action-right.cpm-last-col a {
+  display: inline-block;
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-content .cpm-todo-action-right.cpm-last-col a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-form .cpm-task-edit-form {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-todo-form .cpm-task-edit-form .cpm-task-form {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .tablenav .tablenav-pages a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .tablenav .tablenav-pages a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .tablenav .tablenav-pages a.current {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-new-todolist-form {
+  width: 70%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-new-todolist-form .cpm-todo-list-form-wrap.cpm-form.cpm-slide-list {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-new-todolist-form .cpm-todo-list-form-wrap.cpm-form.cpm-slide-list .item {
+  margin-bottom: 10px;
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-new-todolist-form .cpm-todo-list-form-wrap.cpm-form.cpm-slide-list .item textarea {
+  width: 100%;
+}
+.cpm.cpm-front-end .cpm-task-container.wrap .cpm-new-todolist-form .cpm-todo-list-form-wrap.cpm-form.cpm-slide-list .item.milestone select {
+  height: 30px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-uplaod-btn-list a {
+  box-shadow: none;
+  padding: 5px;
+  margin-left: 0px;
+  margin-right: 5px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-uplaod-btn-list a.button.button-primary {
+  background: #0085ba;
+  border-color: #0073aa #006799 #006799;
+  -webkit-box-shadow: 0 1px 0 #006799;
+  box-shadow: 0 1px 0 #006799;
+  color: #fff;
+  text-shadow: 0 -1px 1px #006799, 1px 0 1px #006799, 0 1px 1px #006799, -1px 0 1px #006799;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-uplaod-btn-list.cpm-right {
+  float: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-previous-back ul li {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-previous-back ul li.cpm-right {
+  font-size: 14px;
+  margin-top: -1px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-previous-back ul li a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-previous-back ul li a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .modal-mask .modal-wrapper .modal-container .modal-header .close-vue-modal {
+  padding: 0px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .modal-mask .modal-wrapper .modal-container .modal-header .close-vue-modal a {
+  box-shadow: none;
+  border: none;
+  padding: 15px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .modal-mask .modal-wrapper .modal-container .modal-header h3 {
+  clear: none;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .modal-mask .modal-wrapper .modal-container .modal-footer .submit {
+  padding: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list {
+  margin-top: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .folder .ff-content .image-content {
+  margin-bottom: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .folder .ff-content .footer-section a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .ff-content .cpm-rdoc-view .image-content {
+  margin-bottom: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .ff-content .cpm-rdoc-view .image-content .text a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .ff-content .cpm-rdoc-view .image-content .text a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .ff-content .cpm-rdoc-view .footer-section a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .ff-content .cpm-doc-view .doc-content {
+  margin-bottom: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .image-content {
+  margin-bottom: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .cpm-folders-list .file .footer-section a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .form-uploader {
+  border: 1px solid #e5e5e5;
+  margin-top: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .form-uploader .cpm-form-title a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .form-uploader .cpm-form-title a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .docform {
+  border: 1px solid #e5e5e5;
+  margin-top: 10px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .docform .cpm-form-title a {
+  box-shadow: none;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .docform .cpm-form-title a:hover {
+  border-bottom: 1px solid #333;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .docform form#cpm-doc-form input {
+  margin-bottom: 15px;
+}
+.cpm.cpm-front-end .cpm-pro-file-container .docform form#cpm-googledoc-form .docs-icon {
+  margin-top: 35px;
+}
+.cpm trix-editor ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.cpm trix-editor ul li {
+  list-style: disc;
+}
+.cpm trix-editor ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+.cpm trix-editor ol li {
+  list-style: decimal;
+}

@@ -1,0 +1,50 @@
+Create a reason seller side.
+http://192.168.15.169/project/rma/wp-json/mobikul/v1/add-rma-reason
+Method POST
+
+Json:
+
+{
+"seller_id":2,
+"wk_rma_reason": "Test by sagar sharma",
+"wk_rma_status": "enabled"
+}
+
+==========================
+Get rma reason
+http://192.168.15.169/project/rma/wp-json/mobikul/v1/get-rma-reason
+
+{
+"seller_id":2
+"reason_id":2,
+}
+
+reason_id => optional
+
+
+===================
+Update rma reason
+
+method post
+
+http://192.168.15.169/project/rma/wp-json/mobikul/v1/update-rma-reason/
+
+
+{
+"seller_id":2,
+"wk_rma_reason": "not good at all1",
+"wk_rma_status": "enabled",
+"reason_id": 2
+}
+
+==================
+Remove reason
+method post
+http://192.168.15.169/project/rma/wp-json/mobikul/v1/delete-rma-reason
+
+{
+"reason_id":2,
+"seller_id":2
+}
+
+

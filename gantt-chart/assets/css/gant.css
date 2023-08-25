@@ -1,0 +1,10 @@
+
+li a.ganttchat {
+    background-image: url('../images/ganchart.svg');
+}
+
+a.ganttchat:hover,
+a.ganttchat.active{
+    background-image: url('../images/ganchart-hover.svg');
+
+}

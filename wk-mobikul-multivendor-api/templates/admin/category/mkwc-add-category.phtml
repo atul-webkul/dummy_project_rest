@@ -1,0 +1,144 @@
+<?php
+
+/**
+ * @author Webkul
+ * @version 1.0.0
+ * This file handles php web view for add category.
+ */
+
+use WkMobikulMultivendorApi\Helper;
+use WkMobikulMultivendorApi\Includes\Admin;
+
+defined( 'ABSPATH' ) || exit;
+
+$category_id = '';
+
+global $wpdb;
+
+$table_name = $wpdb->prefix . 'termmeta';
+
+$product_store_handler = new Helper\Mkwc_Product_store();
+
+$category_data         = new Admin\Mkwc_Function_Handler();
+
+$mkwc_sort_order = $mkwc_status = '';
+if ( isset( $_GET['action'] ) && 'edit' == $_GET['action'] && isset( $_GET['category_id'] ) && $_GET['category_id'] ) {
+    if( isset( $_POST['mkwc_update_category'] ) && isset( $_POST['mkwc-category-nonce'] ) ) {
+        if ( ! wp_verify_nonce( $_POST['mkwc-category-nonce'], 'mkwc-category-nonce-action' ) ) {
+            die( 'Access denied' );
+        } else {
+            $category_data->mkwc_save_category_data( $_POST );
+        }
+    }
+    $category_id      = filter_input( INPUT_GET, 'category_id', FILTER_SANITIZE_NUMBER_INT );
+
+    $mkwc_sort_order  = get_term_meta( $category_id, 'api_featured_sort_order', true );
+
+    $mkwc_status      = get_term_meta( $category_id, 'api_featured_category', true );
+
+} else if ( isset( $_GET['action'] ) && 'add' == $_GET['action'] && isset( $_POST['mkwc_save_category'] ) && isset( $_POST['mkwc-category-nonce'] ) ) {
+    if ( ! wp_verify_nonce( $_POST['mkwc-category-nonce'], 'mkwc-category-nonce-action' ) ) {
+        die( 'Access denied' );
+    } else {
+        if ( isset( $_POST['mkwc_category_procat'] ) ) {
+            $category_id  = $_POST['mkwc_category_procat'];
+
+            $cat_check = $product_store_handler->mkwc_check_featured_category_id( $category_id );
+
+            if( empty( $cat_check ) ){
+                $category_data->mkwc_save_category_data( $_POST );
+            } else {
+                echo '<div class="notice notice-error is-dismissible"><p><strong>';
+
+                echo __( 'This category is already a featured category.', 'mobikul_marketplace' ).'</strong></p>';
+
+                echo '</div>';
+            }
+        }
+    }
+}
+
+$category_src = wc_placeholder_img_src();
+
+?>
+
+<div class="wrap">
+    <h1 class="wp-heading-inline"><?php echo __( 'Add Category', 'mobikul_marketplace' ); ?></h1>
+
+    <a href="<?php echo admin_url( 'admin.php?page=mobikul-featured-categories' ) ?>" class="page-title-action"><?php echo __( 'Back', 'mobikul_marketplace' ); ?></a>
+
+    <form method="POST">
+        <table class="form-table add-category">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row" class="titledesc">
+                      <label for="mkwc_sort_order">
+                          <?php echo __( 'Sort Order', 'mobikul_marketplace' ); ?>
+                          <abbr class="required" title="required">*</abbr>
+                      </label>
+                    </th>
+
+                    <td>
+                      <input type="number" name="mkwc_sort_order" id="mkwc_sort_order" value="<?php if( $mkwc_sort_order ) echo $mkwc_sort_order; ?>" style="min-width:350px;" required>
+                    </td>
+                </tr>
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-category-procat">
+                            <?php echo __( 'Category', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_category_procat" id="mkwc-category-procat"  required style="min-width:350px;">
+                            <option value="-1"><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <?php
+                                $product_categories = get_terms( 'product_cat', array( 'hide_empty' => false, 'parent' => 0 ) );
+
+                                if ( ! empty( $product_categories ) ) {
+                                    foreach( $product_categories as $value ) {
+                                      ?>
+                                        <option value="<?php echo $value->term_id; ?>" <?php if ( $category_id && $category_id == $value->term_id ) echo 'selected="selected"'; ?>>
+                                            <?php echo $value->name ? html_entity_decode( $value->name ) : 'No title'; ?>
+                                        </option>
+                                      <?php
+                                    }
+                                }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-category-status">
+                            <?php echo __( 'Status', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_category_status" id="mkwc-category-status" style="min-width:350px;">
+                            <option value="-1"><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+
+                            <option value="enabled" <?php if( $mkwc_status && $mkwc_status == 'enabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Enabled', 'mobikul_marketplace' ); ?></option>
+
+                            <option value="disabled" <?php if( $mkwc_status && $mkwc_status == 'disabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Disabled', 'mobikul_marketplace' ); ?></option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <?php
+
+        wp_nonce_field( 'mkwc-category-nonce-action', 'mkwc-category-nonce' );
+
+        $submit_name = ( isset( $_GET['action'] ) && $_GET['action'] == 'edit' ) ? __( 'update', 'mobikul_marketplace' ) : __( 'save', 'mobikul_marketplace' );
+
+        submit_button( ucfirst( $submit_name ), 'primary', 'mkwc_' . $submit_name . '_category' );
+
+        ?>
+    </form>
+</div>

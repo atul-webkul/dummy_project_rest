@@ -1,0 +1,162 @@
+<?php
+
+/**
+ * @author Webkul
+ * @version 1.0.0
+ * This file handles php web view for add carousels.
+ */
+
+use WkMobikulMultivendorApi\Includes\Admin;
+
+defined( 'ABSPATH' ) || exit;
+
+$carousels_id = '';
+
+global $wpdb;
+
+$table_name = $wpdb->prefix . 'mp_carousels';
+
+$carousels_data_handler  = new Admin\Mkwc_Function_Handler();
+
+$title = $mkwc_type = $mkwc_category = $mkwc_status = '';
+if ( isset( $_GET['action'] ) && 'edit' == $_GET['action'] && isset( $_GET['carousels_id'] ) && $_GET['carousels_id'] ) {
+    if( isset( $_POST['mkwc_update_carousels'] ) && isset( $_POST['mkwc-carousels-nonce'] ) ) {
+        if ( ! wp_verify_nonce( $_POST['mkwc-carousels-nonce'], 'mkwc-carousels-nonce-action' ) ) {
+            die( 'Access denied' );
+        } else {
+            $carousels_data_handler->mkwc_save_carousels_data( $_POST );
+        }
+    }
+    $carousels_id     = filter_input( INPUT_GET, 'carousels_id', FILTER_SANITIZE_NUMBER_INT );
+
+    $mkwc_carousel   = $wpdb->get_row( "SELECT * FROM $table_name WHERE id = '$carousels_id'" );
+
+    $title      = isset( $mkwc_carousel->title ) ? $mkwc_carousel->title : '';
+
+    $mkwc_type     = isset( $mkwc_carousel->type ) ? $mkwc_carousel->type : '';
+    
+    $mkwc_category = isset( $mkwc_carousel->carousel_ids ) ? maybe_unserialize( $mkwc_carousel->carousel_ids ) : '';
+
+    $mkwc_status   = isset( $mkwc_carousel->status ) ? $mkwc_carousel->status : '';
+
+} else if ( isset( $_GET['action'] ) && 'add' == $_GET['action'] && isset( $_POST['mkwc_save_carousels'] ) && isset( $_POST['mkwc-carousels-nonce'] ) ) {
+    if ( ! wp_verify_nonce( $_POST['mkwc-carousels-nonce'], 'mkwc-carousels-nonce-action' ) ) {
+        die( 'Access denied' );
+    } else {
+        $carousels_data_handler->mkwc_save_carousels_data( $_POST );
+    }
+}
+
+?>
+
+<div class="wrap">
+    <h1 class="wp-heading-inline"><?php echo __( 'Add carousels', 'mobikul_marketplace' ); ?></h1>
+
+    <a href="<?php echo admin_url( 'admin.php?page=mobikul-carousels' ) ?>" class="page-title-action"><?php echo __( 'Back', 'mobikul_marketplace' ); ?></a>
+
+    <form method="POST">
+        <table class="form-table add-carousels">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-carousel-title">
+                            <?php echo __( 'Title', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <input type="text" id="mkwc-carousel-title" name="mkwc_carousel_title" value="<?php echo $title ? $title : ''; ?>" style="min-width:350px;line-height:28px;height:28px;"/>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-carousel-type">
+                            <?php echo __( 'Type', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_carousel_type" id="mkwc-carousel-type" title="<?php echo __( 'Type', 'mobikul_marketplace' ); ?>" style="min-width:350px;">
+                            <option value=""><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <option value="products" <?php if ( $mkwc_type && $mkwc_type == 'products' ) echo 'selected="selected"'; ?>><?php echo __( 'Products', 'mobikul_marketplace' ); ?></option>
+                            <option value="categories" <?php if ( $mkwc_type && $mkwc_type == 'categories' ) echo 'selected="selected"'; ?>><?php echo __( 'categories', 'mobikul_marketplace' ); ?></option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr valign="top" class="<?php if ( $mkwc_type && $mkwc_type == 'images' ) echo 'display-none'; ?>">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-carousel-procat">
+                            <?php echo __( 'Product/Category', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_carousel_procat[]" id="mkwc-carousel-procat" required <?php if ( ! $mkwc_category ) echo 'disabled'; ?> style="min-width:350px;" multiple>
+                            <option value=""><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <?php
+                            if ( $mkwc_type && $mkwc_type == 'products' ) {
+                                $post_table = $wpdb->prefix . 'posts';
+
+                                $products = $wpdb->get_results("SELECT ID, post_title FROM $post_table WHERE post_status = 'publish' AND post_type='product'");
+                                if( ! empty( $products ) ){
+                                    foreach ( $products as $key => $value ) {
+                                      ?>
+                                        <option value="<?php echo $value->ID; ?>" <?php if ( $mkwc_category && in_array( $value->ID, $mkwc_category ) ) echo 'selected= "selected"'; ?>>
+                                            <?php echo $value->post_title ? html_entity_decode( $value->post_title ) : 'No title'; ?>
+                                        </option>
+                                      <?php
+                                    }
+                                }
+                            } else if ( $mkwc_type && $mkwc_type == 'categories' ){
+                                $product_categories = get_terms( 'product_cat', array('hide_empty' => false, 'parent' => 0));
+
+                                if ( $mkwc_category && ! empty( $product_categories ) ) {
+                                    foreach( $product_categories as $value ) {
+                                      ?>
+                                        <option value="<?php echo $value->term_id; ?>" <?php if ( $mkwc_category && in_array( $value->term_id, $mkwc_category ) ) echo 'selected="selected"'; ?>>
+                                            <?php echo $value->name ? html_entity_decode( $value->name ) : 'No title'; ?>
+                                        </option>
+                                      <?php
+                                    }
+                                }
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-carousel-status">
+                            <?php echo __( 'Status', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_carousel_status" id="mkwc-carousel-status" style="min-width:350px;">
+                            <option value=""><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <option value="enabled" <?php if( $mkwc_status && $mkwc_status == 'enabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Enabled', 'mobikul_marketplace' ); ?></option>
+                            <option value="disabled" <?php if( $mkwc_status && $mkwc_status == 'disabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Disabled', 'mobikul_marketplace' ); ?></option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <?php
+
+        wp_nonce_field( 'mkwc-carousels-nonce-action', 'mkwc-carousels-nonce' );
+
+        $submit_name = ( isset( $_GET['action'] ) && $_GET['action'] == 'edit' ) ? __( 'update', 'mobikul_marketplace' ) : __( 'save', 'mobikul_marketplace' );
+
+        submit_button( ucfirst( $submit_name ), 'primary', 'mkwc_' . $submit_name . '_carousels' );
+
+        ?>
+    </form>
+</div>

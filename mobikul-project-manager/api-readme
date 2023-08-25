@@ -1,0 +1,331 @@
+1. Api To Create Project
+Method: POST
+URL: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/create-project
+json:
+{
+  "project_name": "bgbyugyu ",
+  "project_description":"development",
+  "user_id":2,
+  "role":"co_worker",
+  "project_cat":2,
+  "author_id":1
+}
+
+=============================-----------------------=====================================
+
+2.To Create MileStone
+Method: POST
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/create-milestone
+Json:
+{
+    "post_author":3,
+    "project_id":48,
+    "milestone_name":"new milestone 5",
+    "milestone_detail":"make apis 5",
+    "milestone_privacy":"",
+    "milestone_due":"2023-07-28"
+}
+=============================-----------------------=====================================
+
+3.To Get MileStone
+Method: GET
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/get-milestone
+Json:
+{
+    "milestone_id":63
+}
+
+=============================-----------------------=====================================
+
+4.To Mark milestone as complete
+Method: POST
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/mark-milestone-complete
+Json:
+{
+    "milestone_id":63
+}
+
+=============================-----------------------=====================================
+
+5.To Mark Milestone as open
+Method: POST
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/mark-milestone-open
+Json:
+{
+    "milestone_id":63
+}
+
+=============================-----------------------=====================================
+
+6.To Delete MileStone
+Method: POST
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/delete-milestone
+Json:
+{
+    "milestone_id":63
+}
+
+=============================-----------------------=====================================
+
+7.To Update MileStone
+Method: POST
+URl: http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/update-milestone
+Json:
+{
+    "milestone_id":63,
+    "post_author":3,
+    "project_id":48,
+    "milestone_name":"new milestone 8 new",
+    "milestone_detail":"make apis 90",
+    "milestone_privacy":"",
+    "milestone_due":"2023-07-28"
+}
+
+
+=============================-----------------------=====================================
+
+
+8.To Create Task list
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/add-task-list
+Json:
+{
+    "post_author"  : 2,
+    "tasklist_name":"api development task 1",
+    "tasklist_privacy": "no",
+    "project_id": 64,
+    "tasklist_detail": "task 1 details",
+    "tasklist_milestone":266
+}
+
+=============================-----------------------=====================================
+
+9.To Edit task list
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/edit-task-list
+Json:
+{
+"post_author"  : 2,
+"tasklist_name":"api task 1",
+"tasklist_privacy": "no",
+"project_id": 64,
+"tasklist_detail": "task  details",
+"list_id":84
+}
+
+=============================-----------------------=====================================
+
+10.To delete task list
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/delete-task-list
+Json:
+{
+    "tasklist_id":76
+}
+
+=============================-----------------------=====================================
+
+11.To GET task list
+Method:GET
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/get-task-list/2
+
+=============================-----------------------=====================================
+
+12.To Create Folder
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/create-folder
+Json:
+{
+    "parent":0,
+    "project_id":64,
+    "name":"new folder",
+    "privacy": "",
+    "user_id":2
+}
+
+=============================-----------------------=====================================
+
+13.To Rename Folder
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/rename-folder
+Json:
+{
+    "parent":0,
+    "project_id":64,
+    "name":"newdddddddd",
+    "privacy": "",
+    "folderid":17
+}
+
+=============================-----------------------=====================================
+
+14.To Delete Folder
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/delete-folder
+Json:
+{
+    "folderid":17
+}
+
+
+=============================-----------------------=====================================
+
+15.To Create Task
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/create-task
+Json:
+{
+    "project_id":64,
+    "list_id":270,
+    "task_title":"pooooloofdfdooddddddddd ",
+    "task_text":"hellldfdvdss",
+    "task_privacy":"",
+    "parent":0,
+    "author_id":2,
+    "task_assign":[
+        2
+    ],
+    "task_due":"2023-07-16",
+    "task_start":"2023-07-14"
+}
+
+=============================-----------------------=====================================
+
+16.To Delete Task
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/delete-task
+Json:
+{
+    "task_id":257
+}
+
+
+=============================-----------------------=====================================
+
+17.To Get Task
+Method:GET
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/get-task/270
+
+
+=============================-----------------------=====================================
+
+18.To Mark  Task Complete
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/mark-task-complete
+Json:
+{
+    "task_id":272,
+    "user_id":2
+}
+
+=============================-----------------------=====================================
+
+19.To Mark  Task Uncomplete
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/mark-task-uncomplete
+Json:
+{
+    "task_id":272,
+    "user_id":2
+}
+
+=============================-----------------------=====================================
+
+20.To create Discussion
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/add-message
+Json:
+{
+    "project_id":64,
+    "user_id":2,
+    "cpm_message":"pleafdsefcdse mark afdsfcsdfss complete",
+    "message_title":"helfdfslo thefdsefcsedfceewwww",
+    "message_detail":"dsfaasdfsef",
+    "message_privacy":"",
+}
+
+=============================-----------------------=====================================
+
+21.To Update Discussion
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/add-message
+Json:
+{
+    "project_id":64,
+    "user_id":2,
+    "cpm_message":"pleafdsefcdse mark afdsfcsdfss complete",
+    "message_title":"helfdfslo thefdsefcsedfceewwww",
+    "message_detail":"dsfaasdfsef",
+    "message_privacy":"",
+    "message_id":421
+}
+
+=============================-----------------------=====================================
+
+22.To Reply Discussion
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/reply-message
+Json:
+{
+    "cpm_message":"fcdsadddfffffdwsdfcsdrfwerfedfe",
+    "parent_id":432,
+    "project_id":64,
+    "user_id":2
+}
+
+=============================-----------------------=====================================
+
+23.To Upload Image
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/upload
+Json:
+{
+    "cpm_attachment": attach file,
+    "user_id": 2
+}
+
+=============================-----------------------======================================
+
+24.To Upload File
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/upload-file
+Json:
+{
+"cpm_attachment":[
+479
+],
+"user_id":2,
+"project_id":64,
+"privacy":"",
+"parent":0,
+"image_url":"http://192.168.15.254/woo-marketplace/wp-content/uploads/2023/07/Screenshot-from-2023-04-06-12-43-05.png"
+}
+
+=============================-----------------------=====================================
+
+25.To Create Doc
+Method:POST
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/create-doc
+Json:
+{
+    "project_id":64,
+    "title":"heee newww  tidecfedcfrctle",
+    "description":"helloooo  dfsfsafsafcsdvcfrvcaccc",
+    "private":"no",
+    "parent":0,
+    "user_id":2,
+    "cpm_attachment":[
+        487
+    ]
+}
+
+=============================-----------------------=====================================
+
+26.To Get File and Folder
+Method:GET
+URL:http://192.168.15.254/woo-marketplace/wp-json/mobikul/v1/get-file-folder/64/2/64
+
+1.project_id
+2.user_id
+3.parent_id
+

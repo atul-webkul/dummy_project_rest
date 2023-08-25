@@ -1,0 +1,933 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Mobikul Marketplace\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-15 12:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-4.9.8"
+
+#: functions.php:49
+#, php-format
+msgid ""
+"Mobikul Marketplace is enabled but not effective. It requires <a href=\"%s\" "
+"target=\"_blank\">Marketplace Plugin</a> in order to work."
+msgstr ""
+
+#: helper/class-mkwc-seller-data.php:387
+#: includes/front/seller/class-mkwc-seller-shop-collection.php:67
+msgid "No product found."
+msgstr ""
+
+#: helper/class-mkwc-seller-data.php:641
+msgid "Invalid order ID."
+msgstr ""
+
+#: helper/class-mkwc-seller-data.php:765
+msgid "Sorry, You can't access other seller's orders."
+msgstr ""
+
+#: helper/class-mkwc-seller-data.php:898
+msgid "No followers found!!!"
+msgstr ""
+
+#: helper/class-mkwc-seller-data.php:929
+msgid "No queries found!!!"
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:94
+#: includes/front/cart/class-mkwc-cart-get.php:262
+#: includes/front/users/class-mkwc-users.php:597
+msgid "Billing address not saved."
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:95
+#: includes/front/cart/class-mkwc-cart-get.php:263
+#: includes/front/users/class-mkwc-users.php:598
+msgid "Shipping address not saved."
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:100 helper/class-mkwc-user-data.php:105
+msgid "Account Updated Successfully."
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:166
+msgid "No shipping method found."
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:382
+msgid "Someone requested that the password be reset for the following account:"
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:386
+#, php-format
+msgid "Username: %s"
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:388
+msgid "If this was a mistake, just ignore this email and nothing will happen."
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:390
+msgid "To reset your password, visit the following address:"
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:401
+#, php-format
+msgid "[%s] Password Reset"
+msgstr ""
+
+#: helper/class-mkwc-user-data.php:410
+msgid ""
+"The e-mail could not be sent. Possible reason: your host may have disabled "
+"the mail() function.."
+msgstr ""
+
+#: helper/class-mkwc-checkout-data.php:303 helper/class-mkwc-cart-data.php:213
+#: helper/class-mkwc-cart-data.php:286
+#: includes/front/class-mkwc-front-function-handler.php:401
+#: includes/front/class-mkwc-front-function-handler.php:415
+#: includes/front/class-mkwc-front-function-handler.php:445
+#: includes/front/seller/class-mkwc-seller-product.php:640
+#: includes/front/seller/class-mkwc-seller-shop-followers.php:51
+#: includes/front/seller/class-mkwc-seller-shop-details.php:49
+#: includes/front/seller/class-mkwc-product-list.php:55
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:350
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:108
+#: includes/front/seller/class-mkwc-seller-orders.php:55
+#: includes/front/homepage/class-mkwc-homepage.php:60
+#: includes/front/cart/class-mkwc-cart-get.php:60
+#: includes/front/cart/class-mkwc-cart-get.php:256
+#: includes/front/cart/class-mkwc-cart.php:43
+#: includes/front/cart/class-mkwc-cart.php:65
+#: includes/front/category/class-mkwc-category.php:99
+#: includes/front/products/class-mkwc-products.php:48
+#: includes/front/products/class-mkwc-products.php:124
+#: includes/front/products/class-mkwc-products.php:164
+#: includes/front/products/class-mkwc-products.php:262
+#: includes/front/users/class-mkwc-users.php:61
+#: includes/front/users/class-mkwc-users.php:233
+#: includes/front/users/class-mkwc-users.php:509
+#: includes/front/users/class-mkwc-users.php:768
+msgid "Sorry, you must provide all parameters."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:298
+#: includes/front/cart/class-mkwc-cart.php:96
+msgid "Error Updating Cart."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:347
+msgid ""
+" has  been applied and cannot be used in conjunction with other coupons."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:351
+msgid "Cart updated."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:650
+msgid "Product is already in cart."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:660
+msgid "Sorry, this product cannot be purchased."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:668
+#, php-format
+msgid "You cannot add %s to the cart because the product is out of stock."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:675 helper/class-mkwc-cart-data.php:703
+#: helper/class-mkwc-cart-data.php:709
+#, php-format
+msgid ""
+"You cannot add that amount of %s to the cart because there is not enough "
+"stock ( %s remaining )."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:682
+msgid "You cannot add this product to the cart."
+msgstr ""
+
+#: helper/class-mkwc-cart-data.php:1976 helper/class-mkwc-cart-data.php:2030
+msgid "Empty cart."
+msgstr ""
+
+#: helper/class-mkwc-user-login-data.php:61
+msgid "Invalid Credentials."
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:25
+msgid "Default sorting"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:29
+msgid "Sort by popularity"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:33
+msgid "Sort by average rating"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:37
+msgid "Sort by newness"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:41
+msgid "Sort by price: low to high"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:45
+msgid "Sort by price: high to low"
+msgstr ""
+
+#: factory/class-mkwc-product-factory.php:533
+msgid "Placeholder"
+msgstr ""
+
+#: includes/front/class-mkwc-front-function-handler.php:423
+#: includes/front/seller/class-mkwc-seller-product.php:649
+#: includes/front/seller/class-mkwc-seller-shop-details.php:58
+msgid "Invalid seller ID."
+msgstr ""
+
+#. Name of the plugin
+#: includes/admin/class-mkwc-function-handler.php:28
+msgid "Mobikul Marketplace"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:30
+msgid "Mobikul Banner"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:30
+msgid "Banners"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:32
+#: includes/admin/class-mkwc-function-handler.php:34
+msgid "Mobikul Featured Products"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:32
+#: includes/front/homepage/class-mkwc-homepage.php:67
+msgid "Featured Products"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:34
+msgid "Featured Categories"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:36
+msgid "Mobikul Notifications"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:36
+msgid "Notifications"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:38
+msgid "Mobikul Settings"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:38
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:58
+msgid "Upload"
+msgstr ""
+
+#: includes/admin/class-mkwc-function-handler.php:59
+#: templates/admin/notification/class-mkwc-notification-list.php:76
+msgid "Banner"
+msgstr ""
+
+#: includes/admin/class-mkwc-form-errors.php:48
+#: includes/admin/class-mkwc-form-errors.php:57
+msgid "Dismiss this notice."
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:41
+msgid "App Banners"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:43
+msgid "Add Banner"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:45
+msgid "List of added banners for app homepage."
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:76
+msgid "App Featured Products"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:78
+msgid "Add Product"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:80
+msgid "List of products added as featured for app homepage."
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:112
+msgid "App Category"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:114
+msgid "Add Featured Category"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:116
+msgid "List of added category for app homepage."
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:149
+msgid "App Notification"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:151
+msgid "Add notification"
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:153
+msgid "List of added notifications for app homepage."
+msgstr ""
+
+#: templates/admin/class-mkwc-server-settings-template.php:222
+msgid "-- Select --"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-notifications.php:51
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:51
+msgid " Sorry, you must provide all parameters."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-notifications.php:66
+msgid "No notifications found."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:54
+msgid "Search keyword is missing."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:83
+#: includes/front/seller/class-mkwc-seller-product.php:159
+#: includes/front/seller/class-mkwc-seller-product.php:341
+msgid "Invalid Product ID."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:94
+msgid "You can't delete other seller's product."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:116
+#, php-format
+msgid "%s deleted successfully."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:121
+#, php-format
+msgid "%s cannot be deleted."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:170
+#: includes/front/seller/class-mkwc-seller-product.php:353
+msgid "You can't edit other seller's product."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:317
+msgid "Product not updated."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:368
+msgid "Do Not Allow"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:372
+msgid "Allow but notify customer"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:376
+msgid "Allow"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:383
+msgid "In Stock"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:387
+msgid "Out Of Stock"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:395
+msgid "Publish"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:399
+msgid "Draft"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:589
+msgid "Something went wrong, product not created."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:656
+msgid ""
+"Please enter valid product sku, it should be equal or larger than 3 "
+"characters."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:667
+#: includes/front/seller/class-mkwc-seller-product.php:708
+msgid "SKU already exist, please select another SKU."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:672
+msgid "SKU is OK"
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:689
+msgid "Regular price is not a number."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:693
+msgid "Sale price is not a number."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:697
+msgid "Sale price cannot be greater or equal to regular price."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-product.php:701
+msgid "Stock quantity is not a number."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-shop-collection.php:47
+msgid "Sorry, provide all the parameters."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-list.php:91
+msgid "No seller found."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-transactions.php:61
+msgid "No transactions found."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-transactions.php:102
+msgid "No transaction found."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-product-list.php:72
+#: includes/front/products/class-mkwc-products.php:63
+#: includes/front/products/class-mkwc-products.php:139
+#: includes/front/products/class-mkwc-products.php:179
+msgid "No products found."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:105
+msgid "First name is not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:118
+msgid "Last name is not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:133
+msgid "E-mail not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:147
+msgid "E-mail is required."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:157
+msgid "Shop name is not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:163
+msgid "Shop name is required."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:171
+msgid "Phone number length must not exceed 10."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:178
+msgid "Entered phone number is not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:253
+msgid "Facebook URL not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:266
+msgid "Twitter URL not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:279
+msgid "Google Plus URL not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:292
+msgid "LinkedIN URL not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:305
+msgid "Youtube URL not valid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-edit-profile.php:335
+msgid "Profile updated successfully."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:87
+msgid "Subject Invalid."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:90
+msgid "Message length should be greater than 10 and less than 500."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:96
+msgid "Query submitted successfully."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:99
+msgid "Query submission failed."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-ask-admin.php:104
+msgid "Fill required fields."
+msgstr ""
+
+#: includes/front/seller/class-mkwc-seller-orders.php:66
+msgid "No orders found."
+msgstr ""
+
+#: includes/front/homepage/class-mkwc-homepage.php:71
+msgid "New Products"
+msgstr ""
+
+#: includes/front/cart/class-mkwc-cart.php:122
+msgid "Item has been added to your cart."
+msgstr ""
+
+#: includes/front/cart/class-mkwc-cart-set-payment-method.php:60
+#: includes/front/cart/class-mkwc-cart-set-shipping-method.php:60
+msgid "Sorry, you must provide all the parameters."
+msgstr ""
+
+#: includes/front/category/class-mkwc-category.php:52
+#: includes/front/category/class-mkwc-category.php:108
+msgid "Invalid category id."
+msgstr ""
+
+#: includes/front/category/class-mkwc-category.php:66
+#: includes/front/category/class-mkwc-category.php:145
+#: includes/front/products/class-mkwc-products.php:96
+#: includes/front/users/class-mkwc-users.php:278
+msgid "No data found."
+msgstr ""
+
+#: includes/front/media/class-mkwc-media-upload.php:46
+msgid "Sorry, please provide all the parameters."
+msgstr ""
+
+#: includes/front/media/class-mkwc-media-upload.php:70
+msgid "File is not selected."
+msgstr ""
+
+#: includes/front/media/class-mkwc-media-upload.php:84
+msgid "It is too large than expected."
+msgstr ""
+
+#: includes/front/media/class-mkwc-media-upload.php:90
+msgid "WordPress doesn't allow this type of uploads."
+msgstr ""
+
+#: includes/front/media/class-mkwc-media-upload.php:129
+msgid "Something went wrong. Please try agin!"
+msgstr ""
+
+#: includes/front/products/class-mkwc-products.php:202
+#: includes/front/products/class-mkwc-products.php:255
+msgid "Invalid product id."
+msgstr ""
+
+#: includes/front/products/class-mkwc-products.php:231
+msgid "No reviews found."
+msgstr ""
+
+#: includes/front/products/class-mkwc-products.php:319
+msgid "Review added succesfully."
+msgstr ""
+
+#: includes/front/products/class-mkwc-products.php:324
+msgid "Review not added."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:161
+msgid "Invalid user id."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:240
+msgid "Invalid shop url."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:249
+msgid "Not available."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:254
+msgid "Available."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:304
+msgid "Sorry, No Result Found."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:587
+msgid "Address Updation Failed."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:607
+msgid "User not registered."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:637
+msgid "Please enter first name."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:642
+msgid "Please enter last name."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:647
+msgid "Please enter email."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:662
+#: includes/front/users/class-mkwc-users.php:681
+msgid "Account Updation Failed."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:672
+msgid "Incorrect Password."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:687
+#: includes/front/users/class-mkwc-users.php:693
+msgid "Confirm Password does not match new password."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:700
+msgid "Sorry, Nothing to update."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:705
+msgid "Updated Successfully."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:751
+msgid "No downloads available yet."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:778
+msgid "Password reset email has been sent."
+msgstr ""
+
+#: includes/front/users/class-mkwc-users.php:792
+msgid "Invalid Email."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:59
+msgid "Sorry, No Payment gateways Found."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:91
+msgid "Sorry, You must provide all the parameters."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:99
+#, php-format
+msgid "No %1$s data specified to create %1$s"
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:125
+msgid "Customer ID is invalid."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:138
+#, php-format
+msgid "Cannot create order: %s"
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:174
+msgid "Payment method ID and title are required."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:192
+msgid "Provided order currency is invalid."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:401
+msgid "Product ID or SKU is required."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:414
+msgid "Product ID provided does not match this line item."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:447
+msgid "Product is invalid"
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:455
+msgid "Product quantity must be a positive float"
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:463
+msgid "Product quantity is required"
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:498
+msgid "Cannot create line item, try again."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:507
+msgid "Cannot update line item, try again."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:555
+msgid "Cannot update shipping method, try again."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:567
+msgid "Coupon discount total must be a positive amount."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:576
+msgid "Coupon code is required."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:587
+msgid "Cannot create coupon, try again."
+msgstr ""
+
+#: includes/front/checkout/class-mkwc-checkout.php:606
+msgid "Cannot update coupon, try again."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:58
+#: templates/admin/notification/class-mkwc-save-notification-data.php:61
+msgid "Please select a image."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:63
+#: templates/admin/notification/class-mkwc-save-notification-data.php:76
+msgid "Please select a type."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:68
+#: templates/admin/notification/class-mkwc-save-notification-data.php:81
+msgid "Please select a product/Category."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:73
+#: templates/admin/notification/class-mkwc-save-notification-data.php:86
+#: templates/admin/category/class-mkwc-save-category-data.php:60
+msgid "Please select a status."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:81
+msgid "Banner Save successfully."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:86
+msgid "Banner updated successfully."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-save-banner-data.php:90
+#: templates/admin/notification/class-mkwc-save-notification-data.php:120
+#: templates/admin/category/class-mkwc-save-category-data.php:81
+msgid "Please fill up all the required fields "
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:60
+#: templates/admin/notification/class-mkwc-notification-list.php:75
+#: templates/admin/product/class-mkwc-featured-product-list.php:57
+msgid "Title"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:61
+#: templates/admin/category/class-mkwc-category-list.php:60
+msgid "Image"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:62
+#: templates/admin/notification/class-mkwc-notification-list.php:78
+msgid "Type"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:63
+#: templates/admin/notification/class-mkwc-notification-list.php:79
+#: templates/admin/category/class-mkwc-category-list.php:62
+#: templates/admin/product/class-mkwc-featured-product-list.php:59
+msgid "Status"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:170
+#: templates/admin/notification/class-mkwc-notification-list.php:185
+#: templates/admin/category/class-mkwc-category-list.php:166
+#: templates/admin/product/class-mkwc-featured-product-list.php:164
+msgid "Edit"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:171
+#: templates/admin/banner/class-mkwc-banner-list.php:190
+#: templates/admin/notification/class-mkwc-notification-list.php:186
+#: templates/admin/notification/class-mkwc-notification-list.php:200
+#: templates/admin/category/class-mkwc-category-list.php:167
+#: templates/admin/category/class-mkwc-category-list.php:181
+msgid "Trash"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:211
+msgid "Banners Deleted Successfully"
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:217
+#: templates/admin/banner/class-mkwc-banner-list.php:234
+#: templates/admin/notification/class-mkwc-notification-list.php:225
+#: templates/admin/notification/class-mkwc-notification-list.php:242
+msgid "An error has occurred."
+msgstr ""
+
+#: templates/admin/banner/class-mkwc-banner-list.php:228
+msgid "Banner Deleted Successfully"
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-notification-list.php:77
+msgid "Content"
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-notification-list.php:187
+msgid "Send Notification"
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-notification-list.php:201
+msgid "Send Bulk Notifications"
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-notification-list.php:219
+msgid "Notifications deleted successfully."
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-notification-list.php:236
+msgid "Notification deleted successfully."
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-save-notification-data.php:66
+msgid "Please enter a title."
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-save-notification-data.php:71
+msgid "Please enter some content."
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-save-notification-data.php:102
+msgid "Notification Save successfully"
+msgstr ""
+
+#: templates/admin/notification/class-mkwc-save-notification-data.php:116
+msgid "Notification updated successfully"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-save-category-data.php:50
+msgid "Please enter a order number."
+msgstr ""
+
+#: templates/admin/category/class-mkwc-save-category-data.php:55
+msgid "Please select a category."
+msgstr ""
+
+#: templates/admin/category/class-mkwc-save-category-data.php:70
+msgid "Category Save successfully"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-save-category-data.php:77
+msgid "Category updated successfully"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-category-list.php:59
+msgid "Category ID"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-category-list.php:61
+msgid "Sort Order"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-category-list.php:201
+msgid "Categories Deleted Successfully"
+msgstr ""
+
+#: templates/admin/category/class-mkwc-category-list.php:212
+msgid "Category Deleted Successfully"
+msgstr ""
+
+#: templates/admin/product/class-mkwc-featured-product-list.php:58
+msgid "Thumbnail"
+msgstr ""
+
+#: templates/admin/product/class-mkwc-featured-product-list.php:165
+msgid "View"
+msgstr ""
+
+#: templates/admin/configuration/class-mkwc-configuration.php:26
+msgid "Configuration"
+msgstr ""
+
+#: templates/admin/configuration/class-mkwc-configuration.php:31
+msgid "Setting save successfully."
+msgstr ""
+
+#: templates/admin/configuration/class-mkwc-configuration.php:49
+msgid "Google Authorization Key"
+msgstr ""
+
+#: templates/admin/configuration/class-mkwc-configuration.php:59
+msgid "User ID"
+msgstr ""
+
+#: templates/admin/configuration/class-mkwc-configuration.php:69
+msgid "Password"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Mobikul Marketplace converts your marketplace store for WooCommerce into a "
+"mobile app Android/IOS."
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://webkul.com"
+msgstr ""
+
+#. Author of the plugin
+msgid "Webkul"
+msgstr ""

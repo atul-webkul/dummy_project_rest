@@ -1,0 +1,56 @@
+td.sorticon .mkwc-sort-icon:before {
+    content: '\f333';
+    font-family: Dashicons;
+    text-align: center;
+    color: #999;
+    display: block;
+    width: 24px;
+    float: left;
+    height: 100%;
+    line-height: 24px;
+    cursor: move;
+}
+
+td.sorticon, th#sorticon {
+  width: 30px;
+}
+
+.mkwc-banner-img {
+    width: 100px;
+    height: auto;
+}
+.mkwc-image-wrapper {
+    position: relative;
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
+.mkwc-close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+.image_remove {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.image_remove span {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.image_remove:hover span {
+    display: inline-block;
+}
+tr.display-none{
+    display: none;
+}

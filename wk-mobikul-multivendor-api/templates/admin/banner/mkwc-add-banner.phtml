@@ -1,0 +1,170 @@
+<?php
+
+/**
+ * @author Webkul
+ * @version 1.0.0
+ * This file handles php web view for add banner.
+ */
+
+use WkMobikulMultivendorApi\Includes\Admin;
+
+defined( 'ABSPATH' ) || exit;
+
+$banner_id = '';
+
+global $wpdb;
+
+$table_name = $wpdb->prefix . 'mp_banner';
+
+$banner_data_handler  = new Admin\Mkwc_Function_Handler();
+
+$mkwc_img = $mkwc_type = $mkwc_category = $mkwc_status = '';
+if ( isset( $_GET['action'] ) && 'edit' == $_GET['action'] && isset( $_GET['banner_id'] ) && $_GET['banner_id'] ) {
+    if( isset( $_POST['mkwc_update_banner'] ) && isset( $_POST['mkwc-banner-nonce'] ) ) {
+        if ( ! wp_verify_nonce( $_POST['mkwc-banner-nonce'], 'mkwc-banner-nonce-action' ) ) {
+            die( 'Access denied' );
+        } else {
+            $banner_data_handler->mkwc_save_banner_data( $_POST );
+        }
+    }
+    $banner_id     = filter_input( INPUT_GET, 'banner_id', FILTER_SANITIZE_NUMBER_INT );
+
+    $mkwc_banner   = $wpdb->get_row( "SELECT * FROM $table_name WHERE id = '$banner_id'" );
+
+    $mkwc_img      = isset( $mkwc_banner->image ) ? wp_get_attachment_url( $mkwc_banner->image ) : '';
+
+    $mkwc_type     = isset( $mkwc_banner->banner_type ) ? $mkwc_banner->banner_type : '';
+
+    $mkwc_category = isset( $mkwc_banner->term_id ) ? $mkwc_banner->term_id : '';
+
+    $mkwc_status   = isset( $mkwc_banner->status ) ? $mkwc_banner->status : '';
+
+} else if ( isset( $_GET['action'] ) && 'add' == $_GET['action'] && isset( $_POST['mkwc_save_banner'] ) && isset( $_POST['mkwc-banner-nonce'] ) ) {
+    if ( ! wp_verify_nonce( $_POST['mkwc-banner-nonce'], 'mkwc-banner-nonce-action' ) ) {
+        die( 'Access denied' );
+    } else {
+        $banner_data_handler->mkwc_save_banner_data( $_POST );
+    }
+}
+
+$banner_src = wc_placeholder_img_src();
+
+?>
+
+<div class="wrap">
+    <h1 class="wp-heading-inline"><?php echo __( 'Add Banner', 'mobikul_marketplace' ); ?></h1>
+
+    <a href="<?php echo admin_url( 'admin.php?page=mobikul-marketplace' ) ?>" class="page-title-action"><?php echo __( 'Back', 'mobikul_marketplace' ); ?></a>
+
+    <form method="POST">
+        <table class="form-table add-banner">
+            <tbody>
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-banner-image">
+                            <?php echo __( 'Banner Image', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <button class="button button-primary mkwc_upload"><?php echo __( 'Upload', 'mobikul_marketplace' ); ?></button><br/>
+                        <div class="mkwc-image-wrapper">
+                            <img src="<?php echo $mkwc_img ? $mkwc_img : $banner_src; ?>" class="mkwc-banner-img" />
+                            <span class="mkwc-close-icon" data-src="<?php echo $banner_src; ?>">x</span>
+                        </div>
+                        <input type="hidden" id="mkwc-banner-image" name="mkwc_banner_image" value="<?php echo isset( $mkwc_banner->image ) ? $mkwc_banner->image : ''; ?>" />
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-banner-type">
+                            <?php echo __( 'Banner Type', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_banner_type" id="mkwc-banner-type" title="<?php echo __( 'Banner Type', 'mobikul_marketplace' ); ?>" style="min-width:350px;">
+                            <option value="-1"><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <option value="product" <?php if ( $mkwc_type && $mkwc_type == 'product' ) echo 'selected="selected"'; ?>><?php echo __( 'Product', 'mobikul_marketplace' ); ?></option>
+                            <option value="category" <?php if ( $mkwc_type && $mkwc_type == 'category' ) echo 'selected="selected"'; ?>><?php echo __( 'Category', 'mobikul_marketplace' ); ?></option>
+                            <option value="image" <?php if ( $mkwc_type && $mkwc_type == 'image' ) echo 'selected="selected"'; ?>><?php echo __( 'Image', 'mobikul_marketplace' ); ?></option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr valign="top" class="<?php if ( $mkwc_type && $mkwc_type == 'image' ) echo 'display-none'; ?>">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-banner-procat">
+                            <?php echo __( 'Product/Category', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_banner_procat" id="mkwc-banner-procat" data-selected="<?php if ( $mkwc_category ) echo $mkwc_category; ?>" required <?php if ( ! $mkwc_category ) echo 'disabled'; ?> style="min-width:350px;">
+                            <option value="-1"><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <?php
+                            if ( $mkwc_type && $mkwc_type == 'product' ) {
+                                $post_table = $wpdb->prefix . 'posts';
+
+                                $products = $wpdb->get_results("SELECT ID, post_title FROM $post_table WHERE post_status = 'publish' AND post_type='product'");
+                                if( ! empty( $products ) ){
+                                    foreach ( $products as $key => $value ) {
+                                      ?>
+                                        <option value="<?php echo $value->ID; ?>" <?php if ( $mkwc_category && $mkwc_category == $value->ID ) echo 'selected= "selected"'; ?>>
+                                            <?php echo $value->post_title ? html_entity_decode( $value->post_title ) : 'No title'; ?>
+                                        </option>
+                                      <?php
+                                    }
+                                }
+                            } else {
+                                $product_categories = get_terms( 'product_cat', array('hide_empty' => false, 'parent' => 0));
+
+                                if ( $mkwc_category && ! empty( $product_categories ) ) {
+                                    foreach( $product_categories as $value ) {
+                                      ?>
+                                        <option value="<?php echo $value->term_id; ?>" <?php if ( $mkwc_category && $mkwc_category == $value->term_id ) echo 'selected="selected"'; ?>>
+                                            <?php echo $value->name ? html_entity_decode( $value->name ) : 'No title'; ?>
+                                        </option>
+                                      <?php
+                                    }
+                                }
+                            }
+                            ?>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row" class="titledesc" style="min-width:300px;">
+                        <label for="mkwc-banner-status">
+                            <?php echo __( 'Status', 'mobikul_marketplace' ); ?>
+                            <abbr class="required" title="required">*</abbr>
+                        </label>
+                    </th>
+
+                    <td>
+                        <select class="" name="mkwc_banner_status" id="mkwc-banner-status" style="min-width:350px;">
+                            <option value="-1"><?php echo __( '-- Select --', 'mobikul_marketplace' ); ?></option>
+                            <option value="enabled" <?php if( $mkwc_status && $mkwc_status == 'enabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Enabled', 'mobikul_marketplace' ); ?></option>
+                            <option value="disabled" <?php if( $mkwc_status && $mkwc_status == 'disabled' ) echo 'selected="selected"'; ?>><?php echo __( 'Disabled', 'mobikul_marketplace' ); ?></option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <?php
+
+        wp_nonce_field( 'mkwc-banner-nonce-action', 'mkwc-banner-nonce' );
+
+        $submit_name = ( isset( $_GET['action'] ) && $_GET['action'] == 'edit' ) ? __( 'update', 'mobikul_marketplace' ) : __( 'save', 'mobikul_marketplace' );
+
+        submit_button( ucfirst( $submit_name ), 'primary', 'mkwc_' . $submit_name . '_banner' );
+
+        ?>
+    </form>
+</div>
